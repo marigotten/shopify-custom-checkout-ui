@@ -19,7 +19,7 @@ function App() {
   const residentIdState = useMetafield({
     namespace: METAFIELD_NAMESPACE,
     key: METAFIELD_KEY,
-  })
+  });
 
   const handleFieldChange = (value) => {
     updateMetafield ({
@@ -28,7 +28,7 @@ function App() {
       key: METAFIELD_KEY,
       valueType: 'string',
       value: value
-    })
+    });
   };
 
   return ( 
