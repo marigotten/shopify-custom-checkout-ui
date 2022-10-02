@@ -5,7 +5,6 @@ import {
   useApplyMetafieldsChange,
   useMetafield
 } from '@shopify/checkout-ui-extensions-react';
-import { useState } from 'react';
 
 render('Checkout::Dynamic::Render', () => <App />);
 
