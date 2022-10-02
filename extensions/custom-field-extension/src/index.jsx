@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  useExtensionApi,
   render,
   TextField,
-  useTranslate,
+  useApplyMetafieldsChange,
+  useMetafield
 } from '@shopify/checkout-ui-extensions-react';
 import { useState } from 'react';
 
@@ -17,14 +17,14 @@ function App() {
   const updateMetafield = useApplyMetafieldsChange();
 
   const residentIdState = useMetafield({
-    namespace: 'METAFIELD_NAMESPACE',
+    namespace: METAFIELD_NAMESPACE,
     key: METAFIELD_KEY,
   })
 
   const handleFieldChange = (value) => {
     updateMetafield ({
       type: 'updateMetafield',
-      namespace: 'METAFIELD_NAMESPACE',
+      namespace: METAFIELD_NAMESPACE,
       key: METAFIELD_KEY,
       valueType: 'string',
       value: value
